@@ -1,17 +1,20 @@
-public class Main {
+public class (cylinder);
 
-    public static void main(String[] args) {
-        float r,h; 
-        double volumen;
-        
-        Scanner teclado = new Scanner(System.in);
-        System.out.println(“Ingresar radio:”);
-        r=teclado.nextInt();
-        System.out.println(“Ingresar altura:”);
-        h=teclado.nextInt();
-   
-        volumen=3.14159*r*r*h;
-        
-         System.out.println(“Volumen del cilindro es = ” +volumen);              
-    }   
+    private Double altura;
+	private Circulo base;
+	
+
+	public void setAltura(Double altura) {
+		this.altura = altura;
+	}
+	
+	public void setBase(Circulo base) {
+		this.base = base;
+	}
+	
+	public Double getVolumen() {
+		return this.altura * this.base.getArea();
+	}
+	
+	
 }
